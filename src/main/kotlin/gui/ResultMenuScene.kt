@@ -5,6 +5,7 @@ import tools.aqua.bgw.components.uicomponents.Button
 import tools.aqua.bgw.components.uicomponents.Label
 import tools.aqua.bgw.core.Alignment
 import tools.aqua.bgw.core.MenuScene
+import tools.aqua.bgw.style.BorderRadius
 import tools.aqua.bgw.util.Font
 import tools.aqua.bgw.visual.ColorVisual
 import java.awt.Color
@@ -23,22 +24,26 @@ class ResultMenuScene(private val rootService: RootService) :
         text = "GAME RESULT",
         width = 800, height = 150, posX = 560, posY = 100,
         alignment = Alignment.CENTER,
-        font = Font(size = 70)
+        font = Font(110, Color(0x2A4367), "Medodica Regular"),
     )
 
     // Display final result of the game: winner or a tie
     private val resultLabel = Label(
         text = "",
-        width = 500, height = 130, posX = 710, posY = 325,
+        width = 500, height = 130, posX = 710, posY = 400,
         alignment = Alignment.CENTER,
-        font = Font(size = 70)
-    )
+        font = Font(60, Color(0x2A4367), "Medodica Regular"),
+
+        )
 
     // Button to restart the game
     val restartButton = Button(
         text = "RESTART",
         width = 350, height = 130, posX = 1010, posY = 840,
-        font = Font(size = 40)
+        font = Font(90, Color(0x4D6893), "Medodica Regular"),
+        visual = ColorVisual(Color(0xFFFFFF)).apply {
+            style.borderRadius = BorderRadius(20.0)
+        }
     ).apply {
         onMouseClicked = {
             rootService.gameService.onAllRefreshables { refreshAfterRestartNewGame() }
@@ -49,7 +54,10 @@ class ResultMenuScene(private val rootService: RootService) :
     val quitButton = Button(
         text = "QUIT",
         width = 350, height = 130, posX = 560, posY = 840,
-        font = Font(size = 40)
+        font = Font(90, Color(0x4D6893), "Medodica Regular"),
+        visual = ColorVisual(Color(0xFFFFFF)).apply {
+            style.borderRadius = BorderRadius(20.0)
+        }
     ).apply {
         onMouseClicked = {
             exitProcess(0)

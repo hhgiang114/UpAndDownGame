@@ -12,6 +12,7 @@ import tools.aqua.bgw.components.uicomponents.Button
 import tools.aqua.bgw.components.uicomponents.Label
 import tools.aqua.bgw.core.Alignment
 import tools.aqua.bgw.core.BoardGameScene
+import tools.aqua.bgw.style.BorderRadius
 import tools.aqua.bgw.util.BidirectionalMap
 import tools.aqua.bgw.util.Font
 import tools.aqua.bgw.visual.ColorVisual
@@ -34,31 +35,31 @@ class GameScene(private val rootService: RootService) :
     private val overlayPane = Pane<ComponentView>(
         posX = 0, posY = 0,
         width = 1920, height = 1080,
-        visual = ColorVisual(Color(12, 32, 39, 240))
+        visual = ColorVisual(Color(0xc3e9f8))
     ).apply {
         isVisible = false
     }
 
     // Display name and face up hand card of current player
     private val playerHand = LinearLayout<CardView>(
-        posX = 300, posY = 800,
+        posX = 300, posY = 820,
         width = 1320, height = 200,
         alignment = Alignment.CENTER,
         spacing = -60
     )
 
     private val playerName = Label(
-        width = 500, height = 150,
-        posX = 80, posY = 100,
-        text = "Player 1",
-        visual = ColorVisual(Color(0xE6F3FA)),
-        font = Font(40, Color(0x000000))
+        width = 500, height = 100,
+        posX = 710, posY = 60,
+        text = "Current player",
+        // visual = ColorVisual(Color(0xE6F3FA)),
+        font = Font(50, Color(0x4D6893), "Medodica Regular")
     )
 
     //Display the face down stack hand card and name of opponent
     private val opponentHand = LinearLayout<CardView>(
-        width = 1320, height = 200,
-        posX = 1055, posY = 470,
+        width = 1320, height = 100,
+        posX = 1100, posY = 350,
         alignment = Alignment.CENTER,
         spacing = -90
     ).apply {
@@ -67,10 +68,10 @@ class GameScene(private val rootService: RootService) :
 
     private val opponentName = Label(
         width = 500, height = 150,
-        posX = 1370, posY = 100,
-        text = "Player 2",
-        visual = ColorVisual(Color(0xE6F3FA)),
-        font = Font(40, Color(0x000000))
+        posX = 1400, posY = 40,
+        text = "Opponent player",
+        //visual = ColorVisual(Color(0xE6F3FA)),
+        font = Font(30, Color(0x4D6893), "Medodica Regular"),
     )
 
     // Display the center deck. The already played cards faced up on top
@@ -89,40 +90,8 @@ class GameScene(private val rootService: RootService) :
     // Display the face down draw stack of players
     private val drawStack1 = CardView(
         width = 130, height = 200,
-        posX = 450, posY = 430,
+        posX = 895, posY = 480,
         front = cardImageLoader.backImage
-    )
-
-    private val drawStack2 = CardView(
-        width = 130, height = 200,
-        posX = 1370, posY = 430,
-        front = cardImageLoader.backImage
-    )
-
-    // Display the number of card in draw stack
-    private val drawStackCount1 = Label(
-        width = 130, height = 50,
-        posX = 450, posY = 380,
-        text = "",
-        alignment = Alignment.CENTER,
-        font = Font(30, Color(0x000000))
-    )
-
-    private val drawStackCount2 = Label(
-        width = 130, height = 50,
-        posX = 1370, posY = 380,
-        text = "",
-        alignment = Alignment.CENTER,
-        font = Font(30, Color(0x000000))
-    )
-
-    // Button when player wants to draw a card, enabled when player is allowed to redraw, otherwise disabled
-    private val drawButton = Button(
-        text = "DRAW",
-        width = 250, height = 50,
-        posX = 830, posY = 600,
-        font = Font(25, Color(0xFFFFFFF)),
-        visual = ColorVisual(Color(0x75A8C7))
     ).apply {
         onMouseClicked = {
             if (rootService.playerActionService.canDrawCard()) {
@@ -131,13 +100,38 @@ class GameScene(private val rootService: RootService) :
         }
     }
 
+    private val drawStack2 = CardView(
+        width = 130, height = 200,
+        posX = 1500, posY = 300,
+        front = cardImageLoader.backImage
+    )
+
+    // Display the number of card in draw stack
+    private val drawStackCount1 = Label(
+        width = 130, height = 50,
+        posX = 895, posY = 440,
+        text = "",
+        alignment = Alignment.CENTER,
+        font = Font(30, Color(0x022F56), "Medodica Regular")
+    )
+
+    private val drawStackCount2 = Label(
+        width = 130, height = 200,
+        posX = 1500, posY = 230,
+        text = "",
+        alignment = Alignment.CENTER,
+        font = Font(30, Color(0x022F56), "Medodica Regular")
+    )
+
     // Button when player wants to replace his hand cards, enabled when player is allowed to redraw, otherwise disabled
     private val redrawButton = Button(
-        width = 250, height = 50,
-        posX = 830, posY = 720,
+        width = 200, height = 50,
+        posX = 720, posY = 720,
         text = "REDRAW",
-        font = Font(25, Color(0xFFFFFFF)),
-        visual = ColorVisual(Color(0x75A8C7))
+        font = Font(35, Color(0xFFFFFF), "Medodica Regular"),
+        visual = ColorVisual(Color(0x75A8C7)).apply {
+            style.borderRadius = BorderRadius(10.0)
+        }
     ).apply {
         onMouseClicked = {
             if (rootService.playerActionService.canRedrawHand()) {
@@ -148,16 +142,19 @@ class GameScene(private val rootService: RootService) :
 
     // Button when other actions no possible enabled when player is allowed to pass, otherwise disabled
     private val passButton = Button(
-        width = 250, height = 50,
-        posX = 830, posY = 660,
+        width = 200, height = 50,
+        posX = 1000, posY = 720,
         text = "PASS",
-        font = Font(25, Color(0xFFFFFFF)),
-        visual = ColorVisual(Color(0x75A8C7))
+        font = Font(35, Color(0xFFFFFF), "Medodica Regular"),
+        visual = ColorVisual(Color(0x75A8C7)).apply {
+            style.borderRadius = BorderRadius(10.0)
+        }
     ).apply {
         onMouseClicked = {
             if (rootService.playerActionService.canPass()) {
                 rootService.playerActionService.pass()
             }
+
         }
     }
 
@@ -176,6 +173,7 @@ class GameScene(private val rootService: RootService) :
                     val game = checkNotNull(rootService.currentGame)
                     rootService.playerActionService.isValidCard(card, game.centerDeck1)
                 }
+
                 else -> false
             }
         }
@@ -205,6 +203,7 @@ class GameScene(private val rootService: RootService) :
                     val game = checkNotNull(rootService.currentGame)
                     rootService.playerActionService.isValidCard(card, game.centerDeck2)
                 }
+
                 else -> false
             }
         }
@@ -230,7 +229,7 @@ class GameScene(private val rootService: RootService) :
             overlayPane,
             dropArea1, dropArea2,
             drawStackCount1, drawStackCount2,
-            drawButton, passButton, redrawButton
+            passButton, redrawButton
         )
     }
 
@@ -309,9 +308,10 @@ class GameScene(private val rootService: RootService) :
         drawStackCount1.text = player.drawDeck.size.toString() + "/20"
         drawStackCount2.text = otherPlayer.drawDeck.size.toString() + "/20"
 
-        drawButton.isVisible = true
         redrawButton.isVisible = true
         passButton.isVisible = true
+        drawStackCount1.isVisible = true
+        drawStackCount2.isVisible = true
     }
 
     /**
@@ -379,9 +379,10 @@ class GameScene(private val rootService: RootService) :
         val game = rootService.currentGame ?: return
         val actPlayer = game.players[game.currentPlayer]
 
-        drawButton.isVisible = false
         redrawButton.isVisible = false
         passButton.isVisible = false
+        drawStackCount1.isVisible = false
+        drawStackCount2.isVisible = false
 
         // Clear the overlayPane from possible previous components and make it visible
         overlayPane.clear()
@@ -394,7 +395,7 @@ class GameScene(private val rootService: RootService) :
                 posX = 561, posY = 479,
                 text = "It's " + actPlayer.namePlayer + " turn",
                 alignment = Alignment.CENTER,
-                font = Font(100, Color(0xE7EFF2))
+                font = Font(100, Color(0x022F56), "Medodica Regular"),
             )
         )
         overlayPane.add(
@@ -402,8 +403,10 @@ class GameScene(private val rootService: RootService) :
                 posX = 835, posY = 637,
                 width = 250, height = 90,
                 text = "READY",
-                font = Font(50, Color(0xFFFFFFF)),
-                visual = ColorVisual(Color(0x75A8C7))
+                font = Font(50, Color(0xFFFFFFF), "Medodica Regular"),
+                visual = ColorVisual(Color(0x75A8C7)).apply {
+                    style.borderRadius = BorderRadius(10.0)
+                }
             ).apply {
                 onMouseClicked = {
                     overlayPane.isVisible = false

@@ -40,6 +40,11 @@ class PlayerActionService(private val rootService: RootService) : AbstractRefres
         }
         game.lastPass = false
 
+        if (actPlayer.handCards.isEmpty() && actPlayer.drawDeck.isEmpty()) {
+            rootService.gameService.showWinner()
+            onAllRefreshables { refreshAfterShowWinner() }
+        }
+
         // Update GUI
         onAllRefreshables { refreshAfterPlayCard(card) }
         rootService.gameService.switchPlayer()
@@ -97,7 +102,7 @@ class PlayerActionService(private val rootService: RootService) : AbstractRefres
         val game = checkNotNull(rootService.currentGame) { "No game is currently running!" }
         val actPlayer = game.players[game.currentPlayer]
 
-        return (actPlayer.handCards.size < 9 && actPlayer.drawDeck.isNotEmpty())
+        return (actPlayer.handCards.size < 10 && actPlayer.drawDeck.isNotEmpty())
     }
 
     /**

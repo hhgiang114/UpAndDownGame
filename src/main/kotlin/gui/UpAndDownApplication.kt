@@ -2,6 +2,8 @@ package gui
 
 import service.RootService
 import tools.aqua.bgw.core.BoardGameApplication
+import tools.aqua.bgw.util.Font
+
 
 /**
  * Main class of the Up and Down application
@@ -22,9 +24,9 @@ class UpAndDownApplication : BoardGameApplication("Up and Down Game"), Refreshab
      * This menu scene is show after each finished game
      */
     private val resultMenuScene = ResultMenuScene(rootService)
-
     // Initialize the application by adding refreshables and setting the initial scene
     init {
+        loadFont("MedodicaRegular.otf", "Medodica Regular", Font.FontWeight.NORMAL)
         // Register refreshables for the application and every scene
         rootService.addRefreshables(
             this, newGameMenuScene, gameScene, resultMenuScene

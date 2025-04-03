@@ -7,6 +7,7 @@ import tools.aqua.bgw.util.Font
 import tools.aqua.bgw.components.uicomponents.TextField
 import tools.aqua.bgw.components.uicomponents.Button
 import tools.aqua.bgw.core.Alignment
+import tools.aqua.bgw.style.BorderRadius
 import tools.aqua.bgw.visual.ColorVisual
 import java.awt.Color
 import kotlin.system.exitProcess
@@ -25,29 +26,33 @@ class NewGameMenuScene(private val rootService: RootService) :
         width = 800, height = 150, posX = 560, posY = 100,
         text = "Up And Down Game",
         alignment = Alignment.CENTER,
-        font = Font(size = 70)
-    )
+        font = Font(110, Color(0x2A4367), "Medodica Regular"),
+
+        )
 
     // Players enter their name here
     private val player1Input = TextField(
         prompt = "Name of player 1",
         width = 800, height = 130, posX = 560, posY = 325,
-        font = Font(size = 30),
+        font = Font(40, Color(0x4D6893), "Medodica Regular"),
     )
 
     private val player2Input = TextField(
         prompt = "Name of player 2",
         width = 800, height = 130, posX = 560, posY = 540,
-        font = Font(size = 30)
+        font = Font(40, Color(0x4D6893), "Medodica Regular"),
     )
 
     private val playerList = mutableListOf(player1Input, player2Input)
 
     // Button to start the game
-    val startButton = Button(
+    private val startButton = Button(
         text = "START",
         width = 350, height = 130, posX = 1010, posY = 840,
-        font = Font(size = 40)
+        font = Font(90, Color(0x4D6893), "Medodica Regular"),
+        visual = ColorVisual(Color(0xFFFFFF)).apply {
+            style.borderRadius = BorderRadius(20.0)
+        }
     ).apply {
         // When clicked, the game is started with the entered player names
         onMouseClicked = {
@@ -59,10 +64,13 @@ class NewGameMenuScene(private val rootService: RootService) :
     }
 
     // Button to quit the game
-    val quitButton = Button(
+    private val quitButton = Button(
         text = "QUIT",
         width = 350, height = 130, posX = 560, posY = 840,
-        font = Font(size = 40)
+        font = Font(90, Color(0x4D6893), "Medodica Regular"),
+        visual = ColorVisual(Color(0xFFFFFF)).apply {
+            style.borderRadius = BorderRadius(20.0)
+        }
     ).apply {
         onMouseClicked = {
             exitProcess(0)

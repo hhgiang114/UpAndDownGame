@@ -12,8 +12,8 @@ import tools.aqua.bgw.visual.ImageVisual
  */
 const val CARDS_FILE = "card_deck.png"
 
-const val IMG_HEIGHT = 200
-const val IMG_WIDTH = 130
+const val IMG_HEIGHT = 196
+const val IMG_WIDTH = 140
 
 /**
  * Provides access to the src/main/resources/card_deck.png file that contains all card images
@@ -30,15 +30,16 @@ class CardImageLoader {
 
     private val CARDS_FILE = "card_deck.png"
 
-    /**
-     * Provides a blank (white) card
-     */
-    val blankImage: ImageVisual get() = getImageByCoordinates(0, 4)
+//    /**
+//     * Provides a blank (white) card
+//     */
+//    val blankImage: ImageVisual get() = getImageByCoordinates(0, 4)
 
     /**
      * Provides the back side image of the card deck
      */
-    val backImage: ImageVisual get() = getImageByCoordinates(2, 4)
+    //val backImage: ImageVisual get() = getImageByCoordinates(2, 4)
+    val backImage = ImageVisual("card_back.jpg")
 
     /**
      * retrieves from the full raster image CARDS_FILE the corresponding sub-image
@@ -65,10 +66,10 @@ class CardImageLoader {
  */
 val CardSuit.row
     get() = when (this) {
-        CardSuit.CLUBS -> 0
-        CardSuit.DIAMONDS -> 1
-        CardSuit.HEARTS -> 2
-        CardSuit.SPADES -> 3
+        CardSuit.SPADES -> 0
+        CardSuit.HEARTS -> 1
+        CardSuit.CLUBS -> 2
+        CardSuit.DIAMONDS -> 3
     }
 
 /**
@@ -78,17 +79,17 @@ val CardSuit.row
  */
 val CardValue.column
     get() = when (this) {
-        CardValue.ACE -> 0
-        CardValue.TWO -> 1
-        CardValue.THREE -> 2
-        CardValue.FOUR -> 3
-        CardValue.FIVE -> 4
-        CardValue.SIX -> 5
-        CardValue.SEVEN -> 6
-        CardValue.EIGHT -> 7
-        CardValue.NINE -> 8
-        CardValue.TEN -> 9
-        CardValue.JACK -> 10
-        CardValue.QUEEN -> 11
-        CardValue.KING -> 12
+        CardValue.TWO -> 0
+        CardValue.THREE -> 1
+        CardValue.FOUR -> 2
+        CardValue.FIVE -> 3
+        CardValue.SIX -> 4
+        CardValue.SEVEN -> 5
+        CardValue.EIGHT -> 6
+        CardValue.NINE -> 7
+        CardValue.TEN -> 8
+        CardValue.JACK -> 9
+        CardValue.QUEEN -> 10
+        CardValue.KING -> 11
+        CardValue.ACE -> 12
     }
