@@ -1,0 +1,12 @@
+{
+  "format": "kover-agg",
+  "reports": [{
+      "ic": "/Users/gianghoang/Desktop/SoPra/g01t05/build/tmp/koverXmlReport/agg-ic.ic",
+      "smap": "/Users/gianghoang/Desktop/SoPra/g01t05/build/tmp/koverXmlReport/agg-smap.smap"
+    }],
+  "modules": [{"sources": [
+        "/Users/gianghoang/Desktop/SoPra/g01t05/src/main/kotlin",
+        "/Users/gianghoang/Desktop/SoPra/g01t05/src/main/resources"
+      ]}],
+  "xml": "/Users/gianghoang/Desktop/SoPra/g01t05/public/coverage/report.xml"
+}

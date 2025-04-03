@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="service.RedrawHandTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-03-01T18:07:13" hostname="Giang-Hoangs.local" time="0.008">
+  <properties/>
+  <testcase name="test redraw hand card()" classname="service.RedrawHandTest" time="0.004"/>
+  <testcase name="redraw card without current game()" classname="service.RedrawHandTest" time="0.0"/>
+  <testcase name="test redraw card with deck empty()" classname="service.RedrawHandTest" time="0.001"/>
+  <testcase name="test redraw card when not enough hand cards()" classname="service.RedrawHandTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

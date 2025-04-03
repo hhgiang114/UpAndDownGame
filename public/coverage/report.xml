@@ -1,0 +1,396 @@
+<?xml version="1.0" ?>
+<report name="Intellij Coverage Report">
+<package name="service">
+<class name="service/AbstractRefreshingService" sourcefilename="AbstractRefreshingService.kt">
+<method name="addRefreshable" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="0" covered="6"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<method name="&lt;init&gt;" desc="()V">
+<counter type="INSTRUCTION" missed="0" covered="8"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="2"/>
+</method>
+<method name="onAllRefreshables" desc="(Lkotlin/jvm/functions/Function1;)V">
+<counter type="INSTRUCTION" missed="0" covered="10"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<counter type="INSTRUCTION" missed="0" covered="24"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="4"/>
+<counter type="METHOD" missed="0" covered="3"/>
+</class>
+<class name="service/GameService" sourcefilename="GameService.kt">
+<method name="createDeck" desc="()Ljava/util/List;">
+<counter type="INSTRUCTION" missed="0" covered="37"/>
+<counter type="BRANCH" missed="0" covered="4"/>
+<counter type="LINE" missed="0" covered="6"/>
+</method>
+<method name="startTurn" desc="()V">
+<counter type="INSTRUCTION" missed="0" covered="21"/>
+<counter type="BRANCH" missed="0" covered="2"/>
+<counter type="LINE" missed="0" covered="3"/>
+</method>
+<method name="switchPlayer" desc="()V">
+<counter type="INSTRUCTION" missed="0" covered="31"/>
+<counter type="BRANCH" missed="0" covered="2"/>
+<counter type="LINE" missed="0" covered="4"/>
+</method>
+<method name="showWinner" desc="()Ljava/lang/String;">
+<counter type="INSTRUCTION" missed="4" covered="75"/>
+<counter type="BRANCH" missed="2" covered="8"/>
+<counter type="LINE" missed="0" covered="13"/>
+</method>
+<method name="&lt;init&gt;" desc="(Lservice/RootService;)V">
+<counter type="INSTRUCTION" missed="0" covered="5"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<method name="startNewGame" desc="(Ljava/util/List;)V">
+<counter type="INSTRUCTION" missed="0" covered="152"/>
+<counter type="BRANCH" missed="0" covered="4"/>
+<counter type="LINE" missed="0" covered="24"/>
+</method>
+<method name="drawOneCard" desc="(Ljava/util/List;)Lentity/Card;">
+<counter type="INSTRUCTION" missed="1" covered="18"/>
+<counter type="BRANCH" missed="2" covered="2"/>
+<counter type="LINE" missed="0" covered="2"/>
+</method>
+<counter type="INSTRUCTION" missed="5" covered="339"/>
+<counter type="BRANCH" missed="4" covered="22"/>
+<counter type="LINE" missed="0" covered="53"/>
+<counter type="METHOD" missed="0" covered="7"/>
+</class>
+<class name="service/GameService$startNewGame$3" sourcefilename="GameService.kt">
+<method name="invoke" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="service/GameService$startTurn$2" sourcefilename="GameService.kt">
+<method name="invoke" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="service/GameService$switchPlayer$1" sourcefilename="GameService.kt">
+<method name="invoke" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="service/PlayerActionService" sourcefilename="PlayerActionService.kt">
+<method name="canPass" desc="()Z">
+<counter type="INSTRUCTION" missed="2" covered="53"/>
+<counter type="BRANCH" missed="3" covered="9"/>
+<counter type="LINE" missed="0" covered="5"/>
+</method>
+<method name="drawCard" desc="()V">
+<counter type="INSTRUCTION" missed="0" covered="54"/>
+<counter type="BRANCH" missed="0" covered="4"/>
+<counter type="LINE" missed="0" covered="7"/>
+</method>
+<method name="canPlayCard" desc="(Lentity/Card;)Z">
+<counter type="INSTRUCTION" missed="9" covered="41"/>
+<counter type="BRANCH" missed="3" covered="5"/>
+<counter type="LINE" missed="0" covered="4"/>
+</method>
+<method name="redrawHand" desc="()V">
+<counter type="INSTRUCTION" missed="0" covered="81"/>
+<counter type="BRANCH" missed="0" covered="6"/>
+<counter type="LINE" missed="0" covered="13"/>
+</method>
+<method name="&lt;init&gt;" desc="(Lservice/RootService;)V">
+<counter type="INSTRUCTION" missed="0" covered="5"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<method name="canDrawCard" desc="()Z">
+<counter type="INSTRUCTION" missed="1" covered="38"/>
+<counter type="BRANCH" missed="1" covered="7"/>
+<counter type="LINE" missed="0" covered="3"/>
+</method>
+<method name="playCard" desc="(Lentity/Card;)V">
+<counter type="INSTRUCTION" missed="13" covered="68"/>
+<counter type="BRANCH" missed="3" covered="5"/>
+<counter type="LINE" missed="2" covered="10"/>
+</method>
+<method name="canRedrawHand" desc="()Z">
+<counter type="INSTRUCTION" missed="3" covered="36"/>
+<counter type="BRANCH" missed="3" covered="5"/>
+<counter type="LINE" missed="0" covered="3"/>
+</method>
+<method name="pass" desc="()V">
+<counter type="INSTRUCTION" missed="0" covered="46"/>
+<counter type="BRANCH" missed="0" covered="6"/>
+<counter type="LINE" missed="0" covered="7"/>
+</method>
+<method name="isValidCard" desc="(Lentity/Card;Ljava/util/List;)Z">
+<counter type="INSTRUCTION" missed="0" covered="88"/>
+<counter type="BRANCH" missed="0" covered="2"/>
+<counter type="LINE" missed="0" covered="13"/>
+</method>
+<counter type="INSTRUCTION" missed="28" covered="510"/>
+<counter type="BRANCH" missed="13" covered="49"/>
+<counter type="LINE" missed="2" covered="66"/>
+<counter type="METHOD" missed="0" covered="10"/>
+</class>
+<class name="service/PlayerActionService$drawCard$2" sourcefilename="PlayerActionService.kt">
+<method name="invoke" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="service/PlayerActionService$pass$2" sourcefilename="PlayerActionService.kt">
+<method name="invoke" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="service/PlayerActionService$playCard$2" sourcefilename="PlayerActionService.kt">
+<method name="invoke" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="4" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="service/PlayerActionService$redrawHand$3" sourcefilename="PlayerActionService.kt">
+<method name="invoke" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+</method>
+<counter type="INSTRUCTION" missed="2" covered="0"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="1" covered="0"/>
+<counter type="METHOD" missed="1" covered="0"/>
+</class>
+<class name="service/RootService" sourcefilename="RootService.kt">
+<method name="addRefreshables" desc="([Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="0" covered="7"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<method name="getCurrentGame" desc="()Lentity/UpAndDownGame;">
+<counter type="INSTRUCTION" missed="0" covered="5"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="1"/>
+</method>
+<method name="addRefreshable" desc="(Lgui/Refreshable;)V">
+<counter type="INSTRUCTION" missed="0" covered="8"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="2"/>
+</method>
+<method name="&lt;init&gt;" desc="()V">
+<counter type="INSTRUCTION" missed="0" covered="18"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="3"/>
+</method>
+<counter type="INSTRUCTION" missed="0" covered="38"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="7"/>
+<counter type="METHOD" missed="0" covered="4"/>
+</class>
+<sourcefile name="RootService.kt">
+<line nr="14" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="15" mi="0" ci="8" mb="0" cb="0"/>
+<line nr="16" mi="0" ci="8" mb="0" cb="0"/>
+<line nr="19" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="26" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="27" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="36" mi="0" ci="7" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="0" covered="38"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="7"/>
+</sourcefile>
+<sourcefile name="PlayerActionService.kt">
+<line nr="9" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="20" mi="0" ci="15" mb="0" cb="2"/>
+<line nr="21" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="24" mi="0" ci="12" mb="0" cb="2"/>
+<line nr="27" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="30" mi="0" ci="1" mb="0" cb="0"/>
+<line nr="31" mi="0" ci="6" mb="1" cb="1"/>
+<line nr="33" mi="0" ci="8" mb="0" cb="0"/>
+<line nr="36" mi="6" ci="0" mb="2" cb="0"/>
+<line nr="38" mi="7" ci="0" mb="0" cb="0"/>
+<line nr="41" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="44" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="44" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="45" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="53" mi="1" ci="14" mb="1" cb="1"/>
+<line nr="54" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="56" mi="8" ci="5" mb="1" cb="1"/>
+<line nr="57" mi="0" ci="15" mb="1" cb="3"/>
+<line nr="65" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="66" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="67" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="68" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="71" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="72" mi="0" ci="16" mb="0" cb="0"/>
+<line nr="73" mi="0" ci="11" mb="0" cb="0"/>
+<line nr="77" mi="0" ci="6" mb="0" cb="2"/>
+<line nr="78" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="79" mi="0" ci="16" mb="0" cb="0"/>
+<line nr="80" mi="0" ci="11" mb="0" cb="0"/>
+<line nr="83" mi="0" ci="1" mb="0" cb="0"/>
+<line nr="87" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="97" mi="1" ci="14" mb="1" cb="1"/>
+<line nr="98" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="100" mi="0" ci="17" mb="0" cb="6"/>
+<line nr="108" mi="0" ci="15" mb="0" cb="2"/>
+<line nr="109" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="111" mi="0" ci="11" mb="0" cb="2"/>
+<line nr="114" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="115" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="118" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="119" mi="4" ci="0" mb="0" cb="0"/>
+<line nr="121" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="133" mi="0" ci="15" mb="0" cb="2"/>
+<line nr="134" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="136" mi="0" ci="11" mb="0" cb="2"/>
+<line nr="139" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="140" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="141" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="144" mi="0" ci="13" mb="0" cb="2"/>
+<line nr="145" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="146" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="147" mi="0" ci="1" mb="0" cb="0"/>
+<line nr="150" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="153" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="153" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="154" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="162" mi="1" ci="14" mb="1" cb="1"/>
+<line nr="163" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="165" mi="2" ci="15" mb="2" cb="4"/>
+<line nr="174" mi="1" ci="14" mb="1" cb="1"/>
+<line nr="175" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="178" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="179" mi="0" ci="15" mb="1" cb="3"/>
+<line nr="181" mi="1" ci="10" mb="1" cb="5"/>
+<line nr="190" mi="0" ci="15" mb="0" cb="2"/>
+<line nr="192" mi="0" ci="11" mb="0" cb="2"/>
+<line nr="193" mi="0" ci="3" mb="0" cb="2"/>
+<line nr="194" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="195" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="195" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="197" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="198" mi="0" ci="4" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="40" covered="510"/>
+<counter type="BRANCH" missed="13" covered="49"/>
+<counter type="LINE" missed="6" covered="66"/>
+</sourcefile>
+<sourcefile name="AbstractRefreshingService.kt">
+<line nr="9" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="10" mi="0" ci="6" mb="0" cb="0"/>
+<line nr="17" mi="0" ci="6" mb="0" cb="0"/>
+<line nr="25" mi="0" ci="10" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="0" covered="24"/>
+<counter type="BRANCH" missed="0" covered="0"/>
+<counter type="LINE" missed="0" covered="4"/>
+</sourcefile>
+<sourcefile name="GameService.kt">
+<line nr="10" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="19" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="22" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="23" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="26" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="27" mi="0" ci="17" mb="0" cb="2"/>
+<line nr="29" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="30" mi="0" ci="17" mb="0" cb="2"/>
+<line nr="33" mi="0" ci="12" mb="0" cb="0"/>
+<line nr="34" mi="0" ci="12" mb="0" cb="0"/>
+<line nr="37" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="38" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="41" mi="0" ci="10" mb="0" cb="0"/>
+<line nr="42" mi="0" ci="10" mb="0" cb="0"/>
+<line nr="43" mi="0" ci="14" mb="0" cb="0"/>
+<line nr="46" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="49" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="50" mi="0" ci="1" mb="0" cb="0"/>
+<line nr="51" mi="0" ci="1" mb="0" cb="0"/>
+<line nr="54" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="55" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="56" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="59" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="62" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="62" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="65" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="72" mi="0" ci="5" mb="0" cb="0"/>
+<line nr="73" mi="0" ci="10" mb="0" cb="2"/>
+<line nr="74" mi="0" ci="10" mb="0" cb="2"/>
+<line nr="75" mi="0" ci="9" mb="0" cb="0"/>
+<line nr="78" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="79" mi="0" ci="1" mb="0" cb="0"/>
+<line nr="86" mi="1" ci="15" mb="2" cb="2"/>
+<line nr="87" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="96" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="97" mi="0" ci="13" mb="0" cb="2"/>
+<line nr="100" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="100" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="109" mi="0" ci="15" mb="0" cb="2"/>
+<line nr="112" mi="0" ci="9" mb="0" cb="0"/>
+<line nr="115" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="118" mi="0" ci="4" mb="0" cb="0"/>
+<line nr="118" mi="2" ci="0" mb="0" cb="0"/>
+<line nr="126" mi="0" ci="15" mb="0" cb="2"/>
+<line nr="127" mi="0" ci="7" mb="0" cb="0"/>
+<line nr="130" mi="0" ci="8" mb="1" cb="3"/>
+<line nr="131" mi="0" ci="3" mb="0" cb="0"/>
+<line nr="133" mi="0" ci="6" mb="0" cb="0"/>
+<line nr="134" mi="0" ci="6" mb="0" cb="0"/>
+<line nr="137" mi="0" ci="8" mb="0" cb="0"/>
+<line nr="138" mi="0" ci="8" mb="0" cb="0"/>
+<line nr="139" mi="0" ci="2" mb="0" cb="0"/>
+<line nr="140" mi="4" ci="3" mb="1" cb="1"/>
+<line nr="141" mi="0" ci="7" mb="0" cb="2"/>
+<line nr="142" mi="0" ci="1" mb="0" cb="0"/>
+<line nr="144" mi="0" ci="1" mb="0" cb="0"/>
+<counter type="INSTRUCTION" missed="11" covered="339"/>
+<counter type="BRANCH" missed="4" covered="22"/>
+<counter type="LINE" missed="3" covered="53"/>
+</sourcefile>
+<counter type="INSTRUCTION" missed="51" covered="911"/>
+<counter type="BRANCH" missed="17" covered="71"/>
+<counter type="LINE" missed="9" covered="130"/>
+<counter type="METHOD" missed="7" covered="24"/>
+<counter type="CLASS" missed="7" covered="4"/>
+</package>
+<counter type="INSTRUCTION" missed="51" covered="911"/>
+<counter type="BRANCH" missed="17" covered="71"/>
+<counter type="LINE" missed="9" covered="130"/>
+<counter type="METHOD" missed="7" covered="24"/>
+<counter type="CLASS" missed="7" covered="4"/>
+</report>
+

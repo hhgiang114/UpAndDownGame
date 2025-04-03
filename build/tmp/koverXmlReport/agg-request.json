@@ -1,0 +1,20 @@
+{
+  "reports": [{"ic": "/Users/gianghoang/Desktop/SoPra/g01t05/build/kover/test.ic"}],
+  "modules": [{
+      "sources": [
+        "/Users/gianghoang/Desktop/SoPra/g01t05/src/main/kotlin",
+        "/Users/gianghoang/Desktop/SoPra/g01t05/src/main/resources"
+      ],
+      "output": ["/Users/gianghoang/Desktop/SoPra/g01t05/build/classes/kotlin/main"]
+    }],
+  "result": [{
+      "aggregatedReportFile": "/Users/gianghoang/Desktop/SoPra/g01t05/build/tmp/koverXmlReport/agg-ic.ic",
+      "smapFile": "/Users/gianghoang/Desktop/SoPra/g01t05/build/tmp/koverXmlReport/agg-smap.smap",
+      "filters": {"exclude": {"classes": [
+            "gui\\..*",
+            "entity\\..*",
+            ".*MainKt.*",
+            "service\\.bot\\..*"
+          ]}}
+    }]
+}

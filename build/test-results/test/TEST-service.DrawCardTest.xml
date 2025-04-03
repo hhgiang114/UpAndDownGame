@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="service.DrawCardTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-03-01T18:07:13" hostname="Giang-Hoangs.local" time="0.016">
+  <properties/>
+  <testcase name="test draw card with hand full()" classname="service.DrawCardTest" time="0.002"/>
+  <testcase name="testDrawCardNoGame()" classname="service.DrawCardTest" time="0.001"/>
+  <testcase name="testDrawCard()" classname="service.DrawCardTest" time="0.01"/>
+  <testcase name="test draw card from empty stack()" classname="service.DrawCardTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

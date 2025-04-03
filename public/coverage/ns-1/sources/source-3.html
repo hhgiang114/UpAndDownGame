@@ -1,0 +1,470 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > PlayerActionService</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">service</a>
+</div>
+
+<h1>Coverage Summary for Class: PlayerActionService (service)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+<th class="coverageStat 
+">
+  Instruction, %
+</th>
+</tr>
+<tr>
+  <td class="name">PlayerActionService</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    79%
+  </span>
+  <span class="absValue">
+    (49/62)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    97,1%
+  </span>
+  <span class="absValue">
+    (66/68)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    94,8%
+  </span>
+  <span class="absValue">
+    (510/538)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">PlayerActionService$drawCard$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">PlayerActionService$EntriesMappings</td>
+    <td class="coverageStat"/>
+  </tr>
+  <tr>
+    <td class="name">PlayerActionService$pass$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">PlayerActionService$playCard$2</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">PlayerActionService$redrawHand$3</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+    <td class="coverageStat"/>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    71,4%
+  </span>
+  <span class="absValue">
+    (10/14)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    79%
+  </span>
+  <span class="absValue">
+    (49/62)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    91,7%
+  </span>
+  <span class="absValue">
+    (66/72)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    92,7%
+  </span>
+  <span class="absValue">
+    (510/550)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package service
+&nbsp;
+&nbsp;import entity.*
+&nbsp;
+&nbsp;/**
+&nbsp; * PlayerActionService describes all possible actions of a specific player, such as
+&nbsp; * play a card, draw a card, change hand cards, pass
+&nbsp; */
+<b class="fc">&nbsp;class PlayerActionService(private val rootService: RootService) : AbstractRefreshingService() {</b>
+&nbsp;
+&nbsp;    /************************************ PLAY CARD ************************************/
+&nbsp;
+&nbsp;    /**
+&nbsp;     * play a card
+&nbsp;     * if a player has a valid card on their hand, they may place it face-up onto one of the two central piles
+&nbsp;     * @throws IllegalArgumentException if the card is not valid
+&nbsp;     */
+&nbsp;    fun playCard(card: Card) {
+&nbsp;        // Get current game and check if it is currently running
+<b class="fc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+<b class="fc">&nbsp;        val actPlayer = game.players[game.currentPlayer]</b>
+&nbsp;
+&nbsp;        // Check if the selected card is valid for either center deck
+<b class="fc">&nbsp;        require(canPlayCard(card)) { &quot;Selected card is not valid!&quot; }</b>
+&nbsp;
+&nbsp;        // Remove card to play from hand
+<b class="fc">&nbsp;        actPlayer.handCards.remove(card)</b>
+&nbsp;
+&nbsp;        // Add the valid card on top of center deck 1 or center deck 2
+<b class="fc">&nbsp;        when {</b>
+<b class="pc">&nbsp;            isValidCard(card, game.centerDeck1) -&gt; {</b>
+&nbsp;                // Because the center deck card is faced up -&gt; put it in the last of the list
+<b class="fc">&nbsp;                game.centerDeck1.add(game.centerDeck1.size, card)</b>
+&nbsp;            }
+&nbsp;
+<b class="nc">&nbsp;            isValidCard(card, game.centerDeck2) -&gt; {</b>
+&nbsp;                // Because the center deck card is faced up -&gt; put it in the last of the list
+<b class="nc">&nbsp;                game.centerDeck2.add(game.centerDeck2.size, card)</b>
+&nbsp;            }
+&nbsp;        }
+<b class="fc">&nbsp;        game.lastPass = false</b>
+&nbsp;
+&nbsp;        // Update GUI
+<b class="pc">&nbsp;        onAllRefreshables { refreshAfterPlayCard(card) }</b>
+<b class="fc">&nbsp;        rootService.gameService.switchPlayer()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Checks if the player meets the requirements to play a card
+&nbsp;     */
+&nbsp;    fun canPlayCard(card: Card): Boolean {
+&nbsp;        // Get current game and check if it is currently running
+<b class="pc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+<b class="fc">&nbsp;        val actPlayer = game.players[game.currentPlayer]</b>
+&nbsp;
+<b class="pc">&nbsp;        require(card in actPlayer.handCards)</b>
+<b class="pc">&nbsp;        return isValidCard(card, game.centerDeck1) || isValidCard(card, game.centerDeck2)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Check if the card to play is valid with respect to the rule of the game
+&nbsp;     */
+&nbsp;    fun isValidCard(card: Card, centerDeck: MutableList&lt;Card&gt;): Boolean {
+&nbsp;
+<b class="fc">&nbsp;        val cardValues = CardValue.entries //Ordered Enum values</b>
+<b class="fc">&nbsp;        val topPileCard = centerDeck.last()</b>
+<b class="fc">&nbsp;        val topPileCardIndex = cardValues.indexOf(topPileCard.value)</b>
+<b class="fc">&nbsp;        val cardIndex = cardValues.indexOf(card.value)</b>
+&nbsp;
+&nbsp;        // 1 level
+<b class="fc">&nbsp;        val oneLevel = setOf(</b>
+<b class="fc">&nbsp;            (topPileCardIndex + 1) % cardValues.size, //1 level up</b>
+<b class="fc">&nbsp;            (topPileCardIndex - 1 + cardValues.size) % cardValues.size //1 level down and handles negative numbers</b>
+&nbsp;        )
+&nbsp;
+&nbsp;        // 2 levels
+<b class="fc">&nbsp;        val twoLevels = if (card.suit == topPileCard.suit) {</b>
+<b class="fc">&nbsp;            setOf(</b>
+<b class="fc">&nbsp;                (topPileCardIndex + 2) % cardValues.size, //2 levels up</b>
+<b class="fc">&nbsp;                (topPileCardIndex - 2 + cardValues.size) % cardValues.size //2 levels down and handles negative numbers</b>
+&nbsp;            )
+&nbsp;        } else {
+<b class="fc">&nbsp;            emptySet()</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        // Check if the cardIndex matches a valid move
+<b class="fc">&nbsp;        return cardIndex in (oneLevel + twoLevels)</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    /************************************ DRAW CARD ************************************/
+&nbsp;    /**
+&nbsp;     * Check if player has at least 9 hand cards and his own draw pile is not empty
+&nbsp;     */
+&nbsp;    fun canDrawCard(): Boolean {
+&nbsp;        // Get current game and check if it is currently running
+<b class="pc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+<b class="fc">&nbsp;        val actPlayer = game.players[game.currentPlayer]</b>
+&nbsp;
+<b class="fc">&nbsp;        return (actPlayer.handCards.size &lt; 9 &amp;&amp; actPlayer.drawDeck.isNotEmpty())</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Draw a card: player draws one card from his own draw pile
+&nbsp;     */
+&nbsp;    fun drawCard() {
+&nbsp;        // Get current game and check if it is currently running
+<b class="fc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+<b class="fc">&nbsp;        val actPlayer = game.players[game.currentPlayer]</b>
+&nbsp;
+<b class="fc">&nbsp;        require(canDrawCard()) { &quot;Player does not meet the conditions to draw card!&quot; }</b>
+&nbsp;
+&nbsp;        // Get the top card of the draw stack and add it to the current player hand
+<b class="fc">&nbsp;        val drawnCard = actPlayer.drawDeck.removeFirst()</b>
+<b class="fc">&nbsp;        actPlayer.handCards.add(drawnCard)</b>
+&nbsp;
+&nbsp;        // Update GUI
+<b class="fc">&nbsp;        onAllRefreshables {</b>
+<b class="nc">&nbsp;            refreshAfterDrawCard(drawnCard)</b>
+&nbsp;        }
+<b class="fc">&nbsp;        rootService.gameService.switchPlayer()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /************************************ REDRAW HAND CARD ************************************/
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Replace hand cards
+&nbsp;     * player may have all their hand cards put back onto his draw pile,
+&nbsp;     * then get 5 new hand cards from the shuffled draw pile
+&nbsp;     */
+&nbsp;    fun redrawHand() {
+&nbsp;        // Get current game and check if it is currently running
+<b class="fc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+<b class="fc">&nbsp;        val actPlayer = game.players[game.currentPlayer]</b>
+&nbsp;
+<b class="fc">&nbsp;        require(canRedrawHand()) { &quot;Player does not meet the conditions to redraw hand!&quot; }</b>
+&nbsp;
+&nbsp;        // Player puts all hand cards back onto his own draw pile, then shuffle the draw pile
+<b class="fc">&nbsp;        actPlayer.drawDeck.addAll(actPlayer.handCards)</b>
+<b class="fc">&nbsp;        actPlayer.handCards.clear()</b>
+<b class="fc">&nbsp;        actPlayer.drawDeck.shuffle()</b>
+&nbsp;
+&nbsp;        // Draw 5 new cards from the shuffled draw pile
+<b class="fc">&nbsp;        repeat(5) {</b>
+<b class="fc">&nbsp;            val drawnCard = actPlayer.drawDeck.removeFirst()</b>
+<b class="fc">&nbsp;            actPlayer.handCards.add(drawnCard)</b>
+<b class="fc">&nbsp;        }</b>
+&nbsp;
+&nbsp;        // Last action was not pass
+<b class="fc">&nbsp;        game.lastPass = false</b>
+&nbsp;
+&nbsp;        // Update GUI
+<b class="pc">&nbsp;        onAllRefreshables { refreshAfterRedrawHand() }</b>
+<b class="fc">&nbsp;        rootService.gameService.switchPlayer()</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Check if player has at least 8 hand cards and his own draw pile is not empty
+&nbsp;     */
+&nbsp;    fun canRedrawHand(): Boolean {
+&nbsp;        // Get current game and check if it is currently running
+<b class="pc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+<b class="fc">&nbsp;        val actPlayer = game.players[game.currentPlayer]</b>
+&nbsp;
+<b class="pc">&nbsp;        return (actPlayer.handCards.size &gt; 7 &amp;&amp; actPlayer.drawDeck.isNotEmpty())</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /************************************ PASS ************************************/
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Check if a player can pass: can not draw a card, play a card or redraw hand cards
+&nbsp;     */
+&nbsp;    fun canPass(): Boolean {
+<b class="pc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+<b class="fc">&nbsp;        val actPlayer = game.players[game.currentPlayer]</b>
+&nbsp;
+&nbsp;        // Check if the player can play at least one card
+<b class="fc">&nbsp;        val canPlayAtLeastOneCard = actPlayer.handCards.any { card -&gt;</b>
+<b class="pc">&nbsp;            isValidCard(card, game.centerDeck1) || isValidCard(card, game.centerDeck2)</b>
+&nbsp;        }
+<b class="pc">&nbsp;        return !(canPlayAtLeastOneCard || canDrawCard() || canRedrawHand())</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Pass
+&nbsp;     * if both players pass consecutively, the game ends and calculates the result
+&nbsp;     */
+&nbsp;    fun pass() {
+&nbsp;        // Get current game and check if it is currently running
+<b class="fc">&nbsp;        val game = checkNotNull(rootService.currentGame) { &quot;No game is currently running!&quot; }</b>
+&nbsp;
+<b class="fc">&nbsp;        require(canPass()) { &quot;Player does not meet the conditions to pass!&quot; }</b>
+<b class="fc">&nbsp;        if (game.lastPass) {</b>
+<b class="fc">&nbsp;            rootService.gameService.showWinner()</b>
+<b class="pc">&nbsp;            onAllRefreshables { refreshAfterShowWinner() }</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            game.lastPass = true</b>
+<b class="fc">&nbsp;            rootService.gameService.switchPlayer()</b>
+&nbsp;        }
+&nbsp;    }
+&nbsp;
+&nbsp;}
+&nbsp;
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-03-01 19:07</div>
+</div>
+</body>
+</html>

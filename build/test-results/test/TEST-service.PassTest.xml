@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="service.PassTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-03-01T18:07:13" hostname="Giang-Hoangs.local" time="0.031">
+  <properties/>
+  <testcase name="test pass while can still draw card()" classname="service.PassTest" time="0.005"/>
+  <testcase name="test pass second ()" classname="service.PassTest" time="0.021"/>
+  <testcase name="test pass first()" classname="service.PassTest" time="0.001"/>
+  <testcase name="testPassNoGame()" classname="service.PassTest" time="0.001"/>
+  <testcase name="test pass while can still redraw hand()" classname="service.PassTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
